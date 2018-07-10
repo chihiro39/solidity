@@ -28,7 +28,7 @@ Breaking Changes:
  * Optimizer: Remove the no-op ``PUSH1 0 NOT AND`` sequence.
  * Parser: Disallow trailing dots that are not followed by a number.
  * Parser: Remove ``constant`` as function state mutability modifer.
- * Type Checker: Disallow calling constructor with wrong argument count. This was already the case in the experimental 0.5.0 mode.
+ * Type Checker: Disallow empty parentheses for constructor call if it requires arguments. This was already the case in the experimental 0.5.0 mode.
  * Type Checker: Disallow values for constants that are not compile-time constants. This was already the case in the experimental 0.5.0 mode.
  * Type Checker: Disallow arithmetic operations for boolean variables.
  * Type Checker: Disallow conversions between ``bytesX`` and ``uintY`` of different size.
