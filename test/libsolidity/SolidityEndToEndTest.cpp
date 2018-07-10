@@ -7915,7 +7915,7 @@ BOOST_AUTO_TEST_CASE(string_tuples)
 				return (h(), "def");
 			}
 			function h() public returns (string) {
-				return ("abc",);
+				return ("abc");
 			}
 		}
 	)";
@@ -7999,13 +7999,10 @@ BOOST_AUTO_TEST_CASE(destructuring_assignment_wildcard)
 			function f() public returns (uint) {
 				uint a;
 				uint b;
-				uint c;
-				(a,) = (1,);
-				if (a != 1) return 1;
 				(,b) = (2,3,4);
 				if (b != 4) return 2;
-				(, c,) = (5,6,7);
-				if (c != 6) return 3;
+				(, a, ) = (5,6,7);
+				if (a != 6) return 3;
 				(a, b,) = (11, 12, 13);
 				if (a != 11 || b != 12) return 4;
 				(, a, b) = (11, 12, 13);
